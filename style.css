@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+/* * {
+  border: 1px solid yellow;
+} */
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+
+:root {
+  --white-color: white;
+  --black-color: black;
+  --primary-color: #aa3e39;
+  --secondary-color: #aa6e39;
+  --third-color: #236267;
+  --forth-color: #2c8437;
+  --fifth-color: #2c3037;
+}
+
+/* Menu overlay */
+.overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateX(-100vw);
+}
+
+.overlay-slide-right {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-slide-left {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100vw);
+}
+
+/* Menu Bar */
+.menu-bar {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  display: inline;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: var(--white-color);
+  margin: 8px 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+/* Nev */
+nav,
+nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav li:nth-of-type(1) {
+  background-color: var(--primary-color);
+}
+nav li:nth-of-type(2) {
+  background-color: var(--secondary-color);
+}
+nav li:nth-of-type(3) {
+  background-color: var(--third-color);
+}
+nav li:nth-of-type(4) {
+  background-color: var(--forth-color);
+}
+nav li:nth-of-type(5) {
+  background-color: var(--fifth-color);
+}
+
+nav li a::before {
+  content: "";
+  width: 25vw;
+  height: 3px;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 47.5%;
+  left: 0;
+  opacity: 0;
+}
+
+nav li a:hover::before {
+  opacity: 1;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+}
+
+nav ul li {
+  height: 20%;
+  overflow: hidden;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
+}
+
+nav li a {
+  position: relative;
+  top: 45%;
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-family: "Merriweather", serif;
+}
+
+.section-0 {
+  background-image: url(https://images.unsplash.com/photo-1616531980827-1f21b9d387a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80);
+  background-size: cover;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  display: block;
+}
+.section-0 > p {
+  text-decoration: underline;
+  color: var(--white-color);
+  font-size: 0.8em;
+  padding: 5px;
+  margin: 10px 10px;
+  position: fixed;
+}
+
+.section-1 {
+  background-color: var(--primary-color);
+}
+
+.section-2 {
+  background-color: var(--secondary-color);
+}
+.section-3 {
+  background-color: var(--third-color);
+}
+.section-4 {
+  background-color: var(--forth-color);
+}
