@@ -149,6 +149,56 @@ section {
   font-family: "Merriweather", serif;
 }
 
+.slide-in-1 {
+  animation: slide-in 0.4s linear 0.2s;
+}
+.slide-in-2 {
+  animation: slide-in 0.4s linear 0.4s;
+}
+.slide-in-3 {
+  animation: slide-in 0.4s linear 0.6s;
+}
+.slide-in-4 {
+  animation: slide-in 0.4s linear 0.8s;
+}
+.slide-in-5 {
+  animation: slide-in 0.4s linear 1s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-out-1 {
+  animation: slide-out 0.3s linear 0.5s;
+}
+.slide-out-2 {
+  animation: slide-out 0.3s linear 0.4s;
+}
+.slide-out-3 {
+  animation: slide-out 0.3s linear 0.3s;
+}
+.slide-out-4 {
+  animation: slide-out 0.3s linear 0.2s;
+}
+.slide-out-5 {
+  animation: slide-out 0.3s linear 0.1s;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .section-0 {
   background-image: url(https://images.unsplash.com/photo-1616531980827-1f21b9d387a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80);
   background-size: cover;
